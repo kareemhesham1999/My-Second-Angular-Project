@@ -1,0 +1,101 @@
+<nav
+  class="navbar navbar-expand-lg navbar-light bg-light"
+  style="
+    img {
+      width: 50px;
+    }
+  "
+>
+  <div class="container-fluid">
+    <a class="navbar-brand" [routerLink]="['/']">My-Site</a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/']"
+            [routerLinkActive]="'bg-secondary'"
+            [routerLinkActiveOptions]="{exact: true}"
+            >Home</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/products']"
+            [routerLinkActive]="'bg-secondary'"
+            [routerLinkActiveOptions]="{exact: true}"
+            >Products</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/products/0/edit']"
+            [routerLinkActive]="'bg-secondary'"
+            [routerLinkActiveOptions]="{exact: true}"
+            >Add Product</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/products/1']"
+            [routerLinkActive]="'bg-secondary'"
+            [routerLinkActiveOptions]="{exact: true}"
+            >Product Details</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/login']"
+            [routerLinkActive]="'bg-secondary'"
+            [routerLinkActiveOptions]="{exact: true}"
+            >Login</a
+          >
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link active"
+            aria-current="page"
+            [routerLink]="['/anyRandomUrl']"
+            [routerLinkActive]="'bg-secondary'"
+            [routerLinkActiveOptions]="{exact: true}"
+            >test-404</a
+          >
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input
+          class="form-control me-2"
+          type="search"
+          placeholder="Search"
+          aria-label="Search"
+        />
+        <button class="btn btn-outline-success" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+</nav>

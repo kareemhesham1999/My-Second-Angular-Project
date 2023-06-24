@@ -1,0 +1,10 @@
+<div class="bg-secondary text-center p-5 text-light">
+  <h2>Product ID : {{ productId }}</h2>
+  <p class="lead fs-3">Image : <strong>######</strong></p>
+  <p class="lead fs-3">Name : <strong>{{product.productName}}</strong></p>
+  <p class="lead fs-3">Quantity : <strong>{{product.quantity}}</strong></p>
+  <p class="lead fs-3">Price : <strong>{{product.price}}</strong></p>
+  <button (click)="backToProducts()" class="btn btn-primary mt-5">
+    Back To Products
+  </button>
+</div>

@@ -1,0 +1,38 @@
+<div class="container">
+  <h2 class="text-center m-3">Our Products</h2>
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Id</th>
+        <th scope="col">Image</th>
+        <th scope="col">Name</th>
+        <th scope="col">Price</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of products">
+        <th scope="row">{{ product.id }}</th>
+        <td><img src="{{ product.imgUrl }}" style="width: 50px" /></td>
+        <td>{{ product.productName }}</td>
+        <td class="text-danger">{{ product.price | currency }}</td>
+        <td class="text-success">{{ product.quantity }}</td>
+        <td>
+          <i
+            [routerLink]="['/products', product.id]"
+            class="fs-2 mx-1 bi bi-arrows-angle-expand"
+          ></i>
+          <i
+            [routerLink]="['/products', product.id, 'edit']"
+            class="fs-2 mx-1 bi bi-pencil-square"
+          ></i>
+          <i
+            (click)="removeStudent(product)"
+            class="fs-2 mx-1 text-danger bi bi-trash3"
+          ></i>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
